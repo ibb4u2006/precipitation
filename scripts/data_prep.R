@@ -24,18 +24,4 @@ colnames(prcp_prague) <- c_names
 colnames(prcp_athens) <- c_names
 colnames(prcp_oslo) <- c_names
 
-prcp_prague[year > 1960]
-
-prcp_athens[year > 1990 & year < 2000]
-
-prcp_oslo[year == 1921]
-
-prcp_oslo[feb > 50 & mar > 50]
-
-prcp_oslo[feb > 50, feb]
-
-prcp_oslo[feb > 50, year]
-
-prcp_oslo[feb > 50, .(year, dec, jan, feb)]
-
-prcp_prague[jun < 30 & jul < 30, .(year, jun, jul)]
+save(prcp_athens, prcp_oslo, prcp_prague, file = ('./data/scripts/data_prep.R') )
